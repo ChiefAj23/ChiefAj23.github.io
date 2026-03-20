@@ -1,6 +1,6 @@
 ---
 layout: page
-title: ReAL: Reflective Attack Detection for LPLiDARometry
+title: "ReAL: Reflective Attack Detection for LPLiDARometry"
 description: Machine learning-based real-time detection of reflective attacks against LiDAR systems on edge devices.
 img: assets/img/ReALArch.png
 importance: 2
