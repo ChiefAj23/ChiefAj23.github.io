@@ -33,11 +33,14 @@ jobs:
         gem install bundler
         bundle config path vendor/bundle
         bundle install --jobs 4 --retry 3
+
     - name: Setup deploy options
       id: setup
       run: |
         git config --global user.name "GitHub Action"
         git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+        git add Gemfile.lock
+        git commit -m "Auto-update Gemfile.lock" || echo "No changes to commit"
         if [[ ${GITHUB_REF} = refs/pull/*/merge ]]; then # pull request
           echo "SRC_BRANCH=${GITHUB_HEAD_REF}" >> $GITHUB_OUTPUT
           echo "NO_PUSH=--no-push" >> $GITHUB_OUTPUT
@@ -49,6 +52,5 @@ jobs:
         else
           echo "DEPLOY_BRANCH=gh-pages" >> $GITHUB_OUTPUT
         fi
-
     - name: Deploy website
       run: yes | bin/deploy --verbose ${{ steps.setup.outputs.NO_PUSH }} --src ${{ steps.setup.outputs.SRC_BRANCH }} --deploy ${{ steps.setup.outputs.DEPLOY_BRANCH }}
