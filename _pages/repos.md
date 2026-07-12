@@ -7,18 +7,15 @@ nav: true
 nav_order: 3
 
 github_users:
-  - Siddhant-Ray
+  - ChiefAj23
 
 github_repos:
-  - LMCache/LMCache
-  - vllm-project/production-stack
-  - LMCache/LMBenchmark
-  - relatio-nlp/relatio
-  - Siddhant-Ray/ACME-Client-Rust
-  - nsnam/ns-3-dev-git
-  - FatjonZOGAJ/multilingual-text-analytics
-  - langchain-ai/langchain
-  - Lightning-AI/lightning
-  - Siddhant-Ray/Network-Traffic-Transformer
----
+  - ChiefAj23/bdd100k-vlm-baseline
+  - ChiefAj23/qcar-patch-removal
+  - ChiefAj23/ReAL-ReflectiveAttack-Detection-Lidar
+  - ChiefAj23/GNAPing-On-the-Job
+  - ChiefAj23/AI-Voice-Compliance-Auditor
+  - ChiefAj23/Nashville-Crime-Hotspot-Analysis-App
+  - ChiefAj23/AcademicTextSummarizer
+  - ChiefAj23/Anomaly-Detection
 
